@@ -1,0 +1,9 @@
+Comparison,IR,metric,t,p,mean_diff
+Kernel-PAO vs SMOTE,1:2,G-mean,-0.0226,0.9828,-0.0021
+Kernel-PAO vs SMOTE,1:4,G-mean,-0.051,0.9613,-0.0077
+Kernel-PAO vs SMOTE,1:8,G-mean,-0.8251,0.4469,-0.0122
+Kernel-PAO vs SMOTE,1:16,G-mean,-0.5656,0.5961,-0.0129
+M1 vs M0,1:16,G-mean,0.5426,0.6107,0.0481
+M2 vs M1,1:16,G-mean,0.0,1.0,0.0
+M3 vs M2,1:16,G-mean,-0.6119,0.5674,-0.0213
+M4 vs M3,1:16,G-mean,0.3732,0.7243,0.0162

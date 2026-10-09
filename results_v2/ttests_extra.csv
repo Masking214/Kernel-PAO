@@ -1,0 +1,17 @@
+IR,Comparison,t,p,mean_diff
+1:2,Kernel-PAO vs SVM,1.6484,0.1602,0.0106
+1:2,Kernel-PAO vs Importance,0.7458,0.4893,-0.004
+1:2,Kernel-PAO vs Uniform,-0.6507,0.544,-0.007
+1:2,Kernel-PAO vs Stratified,-0.0905,0.9314,-0.0069
+1:4,Kernel-PAO vs SVM,0.7623,0.4803,0.0298
+1:4,Kernel-PAO vs Importance,-1.0954,0.3233,-0.0055
+1:4,Kernel-PAO vs Uniform,-0.2874,0.7853,-0.0073
+1:4,Kernel-PAO vs Stratified,1.3638,0.2308,-0.0038
+1:8,Kernel-PAO vs SVM,1.7757,0.136,0.0331
+1:8,Kernel-PAO vs Importance,-1.4138,0.2166,-0.015
+1:8,Kernel-PAO vs Uniform,-1.3277,0.2417,-0.0135
+1:8,Kernel-PAO vs Stratified,-1.2487,0.2671,-0.0152
+1:16,Kernel-PAO vs SVM,0.3041,0.7733,0.043
+1:16,Kernel-PAO vs Importance,-1.6498,0.1599,-0.0103
+1:16,Kernel-PAO vs Uniform,-1.5767,0.1757,-0.0076
+1:16,Kernel-PAO vs Stratified,-1.2752,0.2583,-0.0063

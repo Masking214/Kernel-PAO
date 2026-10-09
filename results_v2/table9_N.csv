@@ -1,0 +1,7 @@
+N,n_synthetic_total,G-mean,F-value,Train_time_s,note
+1,N0-N1 (constant),0.8958 ± 0.1558,0.7443 ± 0.3326,0.44,
+2,N0-N1 (constant),0.8874 ± 0.1735,0.7393 ± 0.3395,0.42,
+3,N0-N1 (constant),0.8753 ± 0.1656,0.7268 ± 0.3285,0.40,
+4,N0-N1 (constant),0.8636 ± 0.1621,0.7173 ± 0.3185,0.38,
+5,N0-N1 (constant),0.8649 ± 0.1592,0.7177 ± 0.3177,0.43,
+NestedSelected,constant,0.8755 ± 0.1657,-,-,"inner-chosen N: 5,2,2,3,2"

@@ -1,0 +1,27 @@
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Legacy (leakage-protocol) artifacts — archived locally, DO NOT commit
+archive_legacy/
+
+# Manuscript drafts (upload-separately; do not commit to the code repo)
+*.docx
+
+# Internal revision notes (author-only)
+正文修改清单.md
+查找替换对照表.md
+表格修改清单.md
+修改意见-解决方案.md
+v2重跑结果报告.md
+
+# Response letters (confidential during peer review — do NOT commit)
+Response-to-Reviewers*
+
+# Node / editor artifacts
+node_modules/
+~$*.docx

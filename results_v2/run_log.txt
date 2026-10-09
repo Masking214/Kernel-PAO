@@ -1,0 +1,101 @@
+﻿
+======================================================================
+STAGE: main
+======================================================================
+1:2 SVM                G-mean=0.8184 F=0.7639
+1:2 Uniform            G-mean=0.8794 F=0.8310
+1:2 Stratified         G-mean=0.8594 F=0.8105
+1:2 Importance         G-mean=0.8641 F=0.8188
+1:2 SMOTE              G-mean=0.8820 F=0.8372
+1:2 RandomUnder        G-mean=0.8813 F=0.8389
+1:2 OriginalAdaptive   G-mean=0.8774 F=0.8290
+1:2 Kernel-PAO         G-mean=0.8686 F=0.8201
+1:4 SVM                G-mean=0.8296 F=0.7393
+1:4 Uniform            G-mean=0.8881 F=0.7734
+1:4 Stratified         G-mean=0.8899 F=0.7809
+1:4 Importance         G-mean=0.8836 F=0.7593
+1:4 SMOTE              G-mean=0.8925 F=0.7805
+1:4 RandomUnder        G-mean=0.8573 F=0.7391
+1:4 OriginalAdaptive   G-mean=0.8529 F=0.7532
+1:4 Kernel-PAO         G-mean=0.8852 F=0.7709
+1:8 SVM                G-mean=0.8047 F=0.6614
+1:8 Uniform            G-mean=0.8956 F=0.7130
+1:8 Stratified         G-mean=0.8698 F=0.6848
+1:8 Importance         G-mean=0.9041 F=0.7157
+1:8 SMOTE              G-mean=0.8907 F=0.7003
+1:8 RandomUnder        G-mean=0.8413 F=0.6831
+1:8 OriginalAdaptive   G-mean=0.8163 F=0.6655
+1:8 Kernel-PAO         G-mean=0.8619 F=0.6884
+1:16 SVM                G-mean=0.7848 F=0.6235
+1:16 Uniform            G-mean=0.8882 F=0.7305
+1:16 Stratified         G-mean=0.8858 F=0.7314
+1:16 Importance         G-mean=0.9001 F=0.7296
+1:16 SMOTE              G-mean=0.8904 F=0.7383
+1:16 RandomUnder        G-mean=0.7772 F=0.5859
+1:16 OriginalAdaptive   G-mean=0.7933 F=0.6265
+1:16 Kernel-PAO         G-mean=0.8242 F=0.6609
+
+======================================================================
+STAGE: kernels
+======================================================================
+               Kernel          G-mean         F-value Train_time_s                                     note
+                  RBF 0.8958 ± 0.1558 0.7443 ± 0.3326         0.44                                         
+              Poly-d2 0.7851 ± 0.1400 0.6391 ± 0.2688         0.41                                         
+              Poly-d3 0.8439 ± 0.1683 0.7046 ± 0.3353         0.50                                         
+               Linear 0.7916 ± 0.1323 0.6094 ± 0.3226         0.38                                         
+              Sigmoid 0.7276 ± 0.1030 0.4469 ± 0.2882         0.47                                         
+NestedSelected(outer) 0.8777 ± 0.1779 0.7340 ± 0.3351            - inner-chosen: RBF,Linear,RBF,Poly-d3,RBF
+
+======================================================================
+STAGE: ablation
+======================================================================
+M0 0.7848 ± 0.1325 0.6235 ± 0.2607
+M1 0.8848 ± 0.1792 0.7384 ± 0.3411
+M2 0.8848 ± 0.1792 0.7384 ± 0.3411
+M3 0.8015 ± 0.1275 0.6361 ± 0.2740
+M4 0.8242 ± 0.1769 0.6609 ± 0.3035
+
+======================================================================
+STAGE: n
+======================================================================
+N= 1 0.8958 ± 0.1558 0.7443 ± 0.3326 0.4s
+N= 2 0.8874 ± 0.1735 0.7393 ± 0.3395 0.4s
+N= 3 0.8753 ± 0.1656 0.7268 ± 0.3285 0.4s
+N= 4 0.8636 ± 0.1621 0.7173 ± 0.3185 0.4s
+N= 5 0.8649 ± 0.1592 0.7177 ± 0.3177 0.4s
+
+======================================================================
+STAGE: noise
+======================================================================
+SNR inf SVM 0.7848 ± 0.1325
+SNR inf SMOTE 0.8904 ± 0.1664
+SNR inf Kernel-PAO 0.8242 ± 0.1769
+SNR 30 SVM 0.7848 ± 0.1325
+SNR 30 SMOTE 0.8929 ± 0.1610
+SNR 30 Kernel-PAO 0.8266 ± 0.1736
+SNR 20 SVM 0.7737 ± 0.1520
+SNR 20 SMOTE 0.8964 ± 0.1516
+SNR 20 Kernel-PAO 0.8198 ± 0.1824
+SNR 15 SVM 0.7687 ± 0.1547
+SNR 15 SMOTE 0.8981 ± 0.1407
+SNR 15 Kernel-PAO 0.8188 ± 0.1807
+SNR 10 SVM 0.7685 ± 0.1619
+SNR 10 SMOTE 0.8607 ± 0.1338
+SNR 10 Kernel-PAO 0.8046 ± 0.1781
+SNR 5 SVM 0.7408 ± 0.1771
+SNR 5 SMOTE 0.8139 ± 0.1508
+SNR 5 Kernel-PAO 0.7788 ± 0.1868
+
+======================================================================
+STAGE: ttests
+======================================================================
+{'Comparison': 'Kernel-PAO vs SMOTE', 'IR': '1:2', 'metric': 'G-mean', 't': -0.0482, 'p': 0.9634, 'mean_diff': -0.0021}
+{'Comparison': 'Kernel-PAO vs SMOTE', 'IR': '1:4', 'metric': 'G-mean', 't': 0.3673, 'p': 0.7284, 'mean_diff': -0.0077}
+{'Comparison': 'Kernel-PAO vs SMOTE', 'IR': '1:8', 'metric': 'G-mean', 't': -1.3147, 'p': 0.2457, 'mean_diff': -0.0122}
+{'Comparison': 'Kernel-PAO vs SMOTE', 'IR': '1:16', 'metric': 'G-mean', 't': -1.6323, 'p': 0.1635, 'mean_diff': -0.0129}
+{'Comparison': 'M1 vs M0', 'IR': '1:16', 'metric': 'G-mean', 't': 1.2558, 'p': 0.2647, 'mean_diff': 0.0481}
+{'Comparison': 'M2 vs M1', 'IR': '1:16', 'metric': 'G-mean', 't': 0.0, 'p': 1.0, 'mean_diff': 0.0}
+{'Comparison': 'M3 vs M2', 'IR': '1:16', 'metric': 'G-mean', 't': -0.6357, 'p': 0.5529, 'mean_diff': -0.0213}
+{'Comparison': 'M4 vs M3', 'IR': '1:16', 'metric': 'G-mean', 't': 0.229, 'p': 0.8279, 'mean_diff': 0.0162}
+
+全部完成，结果在: C:\Users\Lenovo\Desktop\项目\Kernel-PAO\results_v2
