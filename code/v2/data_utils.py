@@ -42,7 +42,12 @@ def grouped_folds(y, groups, n_splits=5, seed=cfg.RANDOM_STATE):
     """按文件分组、同时尽量保持各折类比的折索引生成器。"""
     sgkf = StratifiedGroupKFold(n_splits=n_splits, shuffle=True, random_state=seed)
     # split 需要 X 占位（仅用 y/groups）
-    return list(sgkf.split(np.zeros((len(y), 1)), y, groups))
+    folds = list(sgkf.split(np.zeros((len(y), 1)), y, groups))
+    # 断言检查：每个折的训练/测试原始振动文件集合必须零交集（防止同一文件跨折泄漏）
+    for tr_idx, te_idx in folds:
+        assert set(groups[tr_idx]).isdisjoint(set(groups[te_idx])), \
+            "data leakage: train/test folds share source files"
+    return folds
 
 
 def fold_train_test(X, y, groups, tr_idx, te_idx):
